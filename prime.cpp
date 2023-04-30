@@ -1,11 +1,18 @@
 #include <bits/stdc++.h>
 using namespace std;
-
+int input(int num)
+{
+    int num;
+    // Taking input from the User .
+    cout << "Enter the number :" << endl;
+    cin >> num;   
+}
 int main()
 {
     // to check for the Prime no
 
     int num;
+    input(67);
     // Taking input from the User .
     cout << "Enter the number :" << endl;
     cin >> num;
