@@ -17,7 +17,7 @@ void duplicate(int arr[], int s)
 }
 int main()
 {
-    int arr[5]={1,2,2,3,3};
+    int arr[5]={1,2,3,3,1};
     duplicate(arr,5);
     return 0;
 }
