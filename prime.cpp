@@ -1,18 +1,12 @@
 #include <bits/stdc++.h>
 using namespace std;
-int input(int num)
-{
-    int num;
-    // Taking input from the User .
-    cout << "Enter the number :" << endl;
-    cin >> num;   
-}
+
 int main()
 {
     // to check for the Prime no
 
     int num;
-    input(67);
+  
     // Taking input from the User .
     cout << "Enter the number :" << endl;
     cin >> num;
@@ -23,8 +17,8 @@ int main()
         return 0;
     }
   
-    int Flag = 0;
-    for (int i = 2; i < num / 2; i++)
+    
+    for (int i = 2; i < sqrt(num); i++)
     {
         if (num % i == 0)
         {
@@ -32,7 +26,7 @@ int main()
             return 0;
         }
     }
-    if (Flag == 0)
+   
         cout << num << " is Prime number";
     
 
