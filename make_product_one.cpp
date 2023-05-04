@@ -5,11 +5,12 @@ void steps_one(int arr[], int s)
     int steps= 0,mul=1,no_zer=0;
     for(int i=0;i<s;i++)
     {
+        // if no is positive make 1
         if(arr[i]>0)
         {
             steps+=(arr[i]-1);
         }
-        
+        // if no is negative make -1
         else if(arr[i]<0)
         {
             steps+=(-1-(arr[i]));
