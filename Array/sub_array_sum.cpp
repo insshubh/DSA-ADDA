@@ -35,3 +35,7 @@ int main()
     sub_array_sum(arr,5,4);
     return 0;
 }
+
+
+
+
