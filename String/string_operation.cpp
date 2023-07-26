@@ -152,8 +152,67 @@ string lower_case(string s)
   }
   return s1;
 }
+string sum_in_str(string s1, string s2)
+{
+  string s3;
+  int carry=0,num1,num2;
+  int i = s1.size()-1,j=s2.size()-1;
+  while(i>=0 && j>=0)
+  {
+    num1=s1[i]-'0';
+    num2=s2[j]-'0';
+    int sum = num1+num2+carry;
+    int res = sum%10;
+    carry=sum/10;
+    s3.push_back(res+'0');
+    i--;
+    j--;
 
-  int main()
+  }
+  
+  while(i>=0)
+  {
+    num1=s1[i]-'0';
+    int sum = num1+carry;
+    int res = sum%10;
+    carry=sum/10;
+    s3.push_back(res+'0');
+    i--;
+  }
+  while(j>=0)
+  {
+    num2=s2[j]-'0';
+    int sum = num2+carry;
+    int res = sum%10;
+    carry=sum/10;
+    s3.push_back(res+'0');
+    j--;
+  }
+  if(carry==1)
+  s3.push_back(carry+'0');
+  int k=s3.size()-1;
+  while(s3[k]=='0'&& k>0)
+  {
+    s3.pop_back();
+    k--;
+  }
+  reverse(s3.begin(),s3.end());
+  return s3;
+ 
+}
+int lenght_longest_substring(string s)
+{
+  int count =0;
+  int table[26]={0};
+  for(int i=0;i<26;i++)
+  {
+    table[s[i]+'a']++;
+  }
+  
+
+
+}
+int main()
   {
     // string samp = "cacb";
     // cout<<maximum_occur_char(samp);
@@ -172,6 +231,10 @@ string lower_case(string s)
     // cout<<merge_two_srings_coreespondingly(s1,s2);
     // string s ="HeRe";
     //  cout<< lower_case(s);
+
+    string s1 = "00";
+    string s2="000";
+    cout<< sum_in_str(s1,s2);
  
     
     return 0;
