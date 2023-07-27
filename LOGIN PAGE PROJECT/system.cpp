@@ -35,7 +35,16 @@ int main()
     cout<<endl<<endl;
     cout << ANSI_BOLD << "Enter Your Choice" << ANSI_RESET<<endl;
     cin>>choice_val;
+    switch (choice_val)
+    {
+    case 1:
+     cout<<"------------------------------------------------------"<<endl<<endl;
+     cout<<"                ";
+     break;
     
+    default:
+     break;
+    }
 
 
 
