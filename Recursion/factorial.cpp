@@ -26,9 +26,10 @@ int one_n_print(int n)
 {
     if(n==0)
     return 1;
-    int num = n;
-    return one_n_print(n-1);
-    cout<<num<<" ";
+
+    one_n_print(n-1);
+    cout<<n<<" ";
+    
     
 }
 int main()
