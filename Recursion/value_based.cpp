@@ -20,7 +20,7 @@ int n_1_print(int n)
     return 1;
 
     cout<<n<<" ";
-    return n_1_print(n-1);
+    n_1_print(n-1);
 }
 int one_n_print(int n)
 {
@@ -38,6 +38,6 @@ int main()
     // cout<<factorial(5);
     //cout<<power_of(3,2);
     //n_1_print(10);
-    one_n_print(10);
+    //one_n_print(10);
     return 0;
 }
