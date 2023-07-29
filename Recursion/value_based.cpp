@@ -32,6 +32,24 @@ int one_n_print(int n)
     
     
 }
+int sum(int val)
+{
+    if(val==1)
+    return 1;
+
+    return val+sum(val-1);
+}
+bool pallindrome(int num,int temp,int numc)
+{
+    if(numc<=0)
+    return temp==num;
+    
+    
+    int ld = num%10;
+    temp=temp*10+ld;
+    return pallindrome(num,temp,numc/10);
+
+}
 int main()
 {
     int num;
@@ -39,5 +57,6 @@ int main()
     //cout<<power_of(3,2);
     //n_1_print(10);
     //one_n_print(10);
+   cout<< pallindrome(1321,0,1321);
     return 0;
 }

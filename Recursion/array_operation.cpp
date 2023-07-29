@@ -30,6 +30,36 @@ int linear_search(int *a,int size,int key)
 
     linear_search(a+1,size-1,key);
 }
+int binary_search(int *a,int start,int end,int key)
+{
+    if(end<start)
+    return 0;
+    int mid = start+(end-start)/2;
+    if(a[mid]==key)
+    return mid;
+   else if(a[mid]>key)
+   {
+    return binary_search(a,start,mid-1,key);
+   }
+   else{
+    return binary_search(a,mid+1,end,key);
+   }
+   
+}
+bool pallindrome(string s ,int b,int e)
+{
+    if(b>=e)
+    return true;
+    
+    if(s[b]!=s[e])
+     return false;
+
+   return pallindrome(s,b+1,e-1);
+    
+   
+
+    
+}
 int main()
 {
     int arr[5]={1,2,3,4,5};
@@ -37,7 +67,10 @@ int main()
     // int sum=0;
     // sum=sum_arr(arr,5,sum);
     // cout<<sum;
-    cout<<linear_search(arr,5,2);
+    //cout<<linear_search(arr,5,2);
+    //cout<<binary_search(arr,0,4,7);
+    string s= "sols";
+   cout<< pallindrome(s,0,s.size()-1);
     
     
     return 0;
