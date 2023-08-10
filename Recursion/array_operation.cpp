@@ -60,6 +60,7 @@ bool pallindrome(string s ,int b,int e)
 
     
 }
+
 int main()
 {
     int arr[5]={1,2,3,4,5};
@@ -69,8 +70,8 @@ int main()
     // cout<<sum;
     //cout<<linear_search(arr,5,2);
     //cout<<binary_search(arr,0,4,7);
-    string s= "sols";
-   cout<< pallindrome(s,0,s.size()-1);
+//     string s= "sols";
+//    cout<< pallindrome(s,0,s.size()-1);
     
     
     return 0;

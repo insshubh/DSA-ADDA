@@ -50,6 +50,16 @@ bool pallindrome(int num,int temp,int numc)
     return pallindrome(num,temp,numc/10);
 
 }
+int sum_digit(int num)
+{
+    if(num==0)
+    {
+        return 0;
+    }
+    int ld = num%10;
+    return ld+sum_digit(num/10);
+}
+
 int main()
 {
     int num;
@@ -57,6 +67,7 @@ int main()
     //cout<<power_of(3,2);
     //n_1_print(10);
     //one_n_print(10);
-   cout<< pallindrome(1321,0,1321);
+   //cout<< pallindrome(1321,0,1321);
+   //cout<<sum_digit(12345);
     return 0;
 }
