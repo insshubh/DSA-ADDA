@@ -11,7 +11,7 @@ void print(node*head)
     while(head!=NULL)
     {
         cout<<head->data<<" ";
-        head=head->next;
+       head=head->next;
        
     }
     cout<<endl;
@@ -82,7 +82,7 @@ void delete_lst(node*head)
    
     
 }
-void delete_At(node* head,int data)
+void delete_At(struct node* head,int data)
 {
     node*ptr=head;
     node*temp=head->next;
@@ -93,6 +93,21 @@ void delete_At(node* head,int data)
     }
     ptr->next=temp->next;
     delete(temp);
+}
+node*rev(node*head)
+{
+     node*prev=NULL;
+     node*temp;
+    
+    while(head)
+    {
+       temp=head->next;
+       head->next=prev;
+       prev=head;
+       head=temp;
+    }
+    
+    return head;
 }
 int main()
 {
@@ -108,6 +123,7 @@ int main()
     }
     temp->next=NULL;
     print(head);
+    cout<<endl;
     // head =insert_atbeg(head,45);
     // print(head);
     // insert_at_lst(head,67);
@@ -120,5 +136,7 @@ int main()
     // print(head);
     // delete_At(head,56);
     // print(head);
+   head= rev(head);
+    print(head);
     return 0;
 }

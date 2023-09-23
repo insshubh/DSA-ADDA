@@ -37,7 +37,8 @@ int sum(int val)
     if(val==1)
     return 1;
 
-    return val+sum(val-1);
+    int res = val+sum(val-1);
+    return res;
 }
 bool pallindrome(int num,int temp,int numc)
 {
@@ -68,6 +69,6 @@ int main()
     //n_1_print(10);
     //one_n_print(10);
    //cout<< pallindrome(1321,0,1321);
-   //cout<<sum_digit(12345);
+   cout<<sum(5);
     return 0;
 }
