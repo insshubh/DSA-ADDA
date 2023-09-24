@@ -1,11 +1,15 @@
 #include<bits/stdc++.h>
 using namespace std;
-int factorial(int n)
+int factorial(int n,int res)
 {
     if(n==1)
     return 1;
-
-    return n*factorial(n-1);
+   
+   res=res*n;
+   factorial(n-1,res);
+   return res;
+   
+     
 }
 int power_of(int n,int m)
 {
@@ -69,6 +73,6 @@ int main()
     //n_1_print(10);
     //one_n_print(10);
    //cout<< pallindrome(1321,0,1321);
-   cout<<sum(5);
+   cout<<factorial(4,1);
     return 0;
 }
