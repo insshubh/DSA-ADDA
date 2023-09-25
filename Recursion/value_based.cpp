@@ -64,6 +64,39 @@ int sum_digit(int num)
     int ld = num%10;
     return ld+sum_digit(num/10);
 }
+int sum_ofdigit(int num)
+{
+    if(num==0)
+    return 0;
+
+    int ld = num%10;
+    return ld + sum_ofdigit(num/10);
+}
+int reverse_num(int num,int temp)
+{
+    if(num==0)
+    return temp;
+   
+   int ld = num%10;
+    temp = temp*10+ld;
+   return reverse_num(num/10,temp);
+    
+}
+int helper(int n,int c)
+{
+   if(n==0)
+   return c;
+
+   else if(n%2==0)
+   return helper(n/2,c+1);
+   else
+   return helper(n-1,c+1);
+}
+int count_steps(int num)
+{
+
+    return helper(num,0);
+}
 
 int main()
 {
@@ -73,6 +106,8 @@ int main()
     //n_1_print(10);
     //one_n_print(10);
    //cout<< pallindrome(1321,0,1321);
-   cout<<factorial(4,1);
+   //cout<<factorial(4,1);
+   //cout<<reverse_num(100023,0);
+   cout<<count_steps(14);
     return 0;
 }
