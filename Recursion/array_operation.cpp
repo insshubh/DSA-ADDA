@@ -1,5 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
+vector<int>ans;
 // Printing array element through Recursion
 void print_arr(const int *a, int size) // output --> 5 4 3 2 1
 {
@@ -55,7 +56,26 @@ bool pallindrome(string s, int b, int e)
 
     return pallindrome(s, b + 1, e - 1);
 }
+void generate(vector<int>a,vector<int>temp,int i)
+{
+   if(i==a.size())
+   {
+    ans.push_back(temp[i]);
+    return ;
+   }
+   temp.push_back(a[i]);
+   generate(a,temp,i+1);
+   temp.pop_back();
+   generate(a,temp,i+1);
 
+}
+vector<int> subset(vector<int>A)
+{
+    vector<int>subs;
+    int i =0;
+    generate(A,subs,i);
+   
+}
 int main()
 {
     int arr[5] = {1, 2, 3, 4, 5};
